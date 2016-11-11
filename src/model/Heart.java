@@ -29,7 +29,7 @@ public class Heart {
 		this.positionY = positionY;
 	}
 	public void paint(Graphics g){
-		g.setColor(Color.RED);
+		g.setColor(Color.PINK);
 		g.fillRect((int) (getPositionX())-25, (int)(getPositionY())-25, 50, 50);
 	}
 
