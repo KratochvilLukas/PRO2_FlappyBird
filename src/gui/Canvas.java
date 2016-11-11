@@ -1,8 +1,8 @@
 package gui;
 
-import java.awt.Color;
+
 import java.awt.Graphics;
-import java.util.ArrayList;
+
 
 import model.Bird;
 import model.Heart;
