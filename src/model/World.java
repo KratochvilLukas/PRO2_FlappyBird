@@ -25,7 +25,12 @@ public class World {
 	}
 	
 	public void update(float deltaTime){
-		bird.update(deltaTime);
+		for (Heart heart : hearts) {
+			heart.update(deltaTime);
+		}
+		for (Tube tube : tubes) {
+			tube.update(deltaTime);
+		}
 	}
 	
 	public void addTube(Tube tube){

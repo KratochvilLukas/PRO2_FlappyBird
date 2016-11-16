@@ -34,6 +34,9 @@ public class Heart {
 
 		g.fillRect((int) (getPositionX())-25, (int)(getPositionY())-25, 50, 50);
 	}
+	public void update(float deltaTime){
+		positionX -= World.SPEED * deltaTime;
+	}
 
 	
 
