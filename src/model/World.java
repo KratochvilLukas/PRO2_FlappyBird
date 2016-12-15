@@ -46,15 +46,17 @@ public class World {
 		for (Tube tube : tubes) {
 			tube.update(deltaTime);
 			if (bird.collideWith(tube)){
-				worldListener.crashTube(tube);
 				tube.setCounted(true);
+				worldListener.crashTube(tube);
+				tube.setDamaged(true);
+
 			}
 			else{
 				if(bird.getPositionX() > tube.getMaxX()){
 					if(!tube.isCounted()){
+						tube.setCounted(true);
 						bird.addPoint();
 						System.out.println("Score: " + bird.getScore());
-						tube.setCounted(true);
 					}
 
 				}
@@ -66,7 +68,7 @@ public class World {
 	public void generateRandom(){
 		for(int i =0; i<3;i++){
 			float x = (SPACE_BETWEEN_TUBES + i * SPACE_BETWEEN_TUBES);
-			addTube(new Tube(x, Tube.getRandomHeight(), Color.GREEN));
+			addTube(new Tube(x, Tube.getRandomHeight()));
 		}
 
 		addHeart(new Heart(SPACE_BETWEEN_HEARTS, Heart.getRandomY()));
@@ -80,6 +82,7 @@ public class World {
 				tube.setPositionX(tube.getPositionX() + tubes.size()  * SPACE_BETWEEN_TUBES);
 				tube.setHeight(Tube.getRandomHeight());
 				tube.setCounted(false);
+				tube.setDamaged(false);
 			}
 		}
 

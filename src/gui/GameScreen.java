@@ -129,10 +129,10 @@ public class GameScreen extends Screen implements model.WorldListener {
 	
 	@Override
 	public void crashTube(Tube tube) {
-		if (!tube.isCounted()) {
+		if(!tube.isDamaged()) {
 			bird.removeLive();
-			bird.setPositionY(tube.getCenterY());
 		}
+
 		
 	}
 	

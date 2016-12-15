@@ -24,6 +24,7 @@ public class Canvas extends java.awt.Canvas{
 	private BufferedImage imageTop;
 	private BufferedImage imageBottom;
 	private BufferedImage imageBackground;
+	private BufferedImage countedTube;
 
 	public static final int BOUND_UP = 100;
 	public static final int BOUND_DOWN = 50;
@@ -45,6 +46,11 @@ public class Canvas extends java.awt.Canvas{
 
 		try {
 			imageTube = ImageIO.read(new File("src/pictures/tube.png"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		try {
+			countedTube = ImageIO.read(new File("src/pictures/tube2.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -80,7 +86,12 @@ public class Canvas extends java.awt.Canvas{
 			heart.paint(g,imageHeart);
 		}
 		for (Tube tube : world.getTubes()){
-			tube.paint(g,imageTube);
+			if (tube.isDamaged()){
+				tube.paint(g,countedTube);
+			}else{
+				tube.paint(g,imageTube);
+			}
+
 		}
 	}
 	
