@@ -14,7 +14,7 @@ public class ScoreManager {
 
     public void addScore(int score) {
         List<Integer> scoreList = getAll();
-        scoreList.add(score);
+        scoreList.add(0,score);
         FileWriter filewriter;
 
         try {

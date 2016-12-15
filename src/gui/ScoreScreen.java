@@ -14,12 +14,13 @@ public class ScoreScreen extends Screen {
 		
 		JButton back = new JButton("BACK");
 		back.setFont(new Font("Arial", Font.PLAIN, 7));
-		add(back);
 		back.setBounds(20,20,60,60);
 		back.addActionListener(e ->
 				mainFrame.setScreen(new HomeScreen(mainFrame)));
+		add(back);
 
-		for(int i = 0; i< ScoreManager.getItemsNumber(); i++){
+
+		for(int i = 0; i< 5; i++){
 			int score = ScoreManager.getItemsIndex(i);
 
 			ScoreItem scoreItem = new ScoreItem(i, score);

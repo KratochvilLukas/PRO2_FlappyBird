@@ -2,41 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d8fa1c6-31b6-47c1-9d6b-e0aa42548251" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PRO2_FlappyBird.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/ScoreManager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/FinishScreen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/ScoreItem.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/gui/HomeScreen$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/gui/ScoreScreen$1.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/game/Game.class" afterPath="$PROJECT_DIR$/bin/game/Game.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/gui/Canvas.class" afterPath="$PROJECT_DIR$/bin/gui/Canvas.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/gui/GameScreen$1.class" afterPath="$PROJECT_DIR$/bin/gui/GameScreen$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/gui/GameScreen$2.class" afterPath="$PROJECT_DIR$/bin/gui/GameScreen$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/gui/GameScreen$3.class" afterPath="$PROJECT_DIR$/bin/gui/GameScreen$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/gui/GameScreen.class" afterPath="$PROJECT_DIR$/bin/gui/GameScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/gui/HomeScreen$1.class" afterPath="$PROJECT_DIR$/bin/gui/HomeScreen$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/gui/HomeScreen$2.class" afterPath="$PROJECT_DIR$/bin/gui/HomeScreen$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/gui/HomeScreen.class" afterPath="$PROJECT_DIR$/bin/gui/HomeScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/gui/MainFrame.class" afterPath="$PROJECT_DIR$/bin/gui/MainFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/gui/ScoreScreen.class" afterPath="$PROJECT_DIR$/bin/gui/ScoreScreen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/gui/Screen.class" afterPath="$PROJECT_DIR$/bin/gui/Screen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/model/Bird.class" afterPath="$PROJECT_DIR$/bin/model/Bird.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/model/Ground.class" afterPath="$PROJECT_DIR$/bin/model/Ground.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/model/Heart.class" afterPath="$PROJECT_DIR$/bin/model/Heart.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/model/Tube.class" afterPath="$PROJECT_DIR$/bin/model/Tube.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/model/World.class" afterPath="$PROJECT_DIR$/bin/model/World.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/Game.java" afterPath="$PROJECT_DIR$/src/game/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/Canvas.java" afterPath="$PROJECT_DIR$/src/gui/Canvas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/GameScreen.java" afterPath="$PROJECT_DIR$/src/gui/GameScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/HomeScreen.java" afterPath="$PROJECT_DIR$/src/gui/HomeScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scores.csv" afterPath="$PROJECT_DIR$/scores.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/ScoreManager.java" afterPath="$PROJECT_DIR$/src/game/ScoreManager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/ScoreScreen.java" afterPath="$PROJECT_DIR$/src/gui/ScoreScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Bird.java" afterPath="$PROJECT_DIR$/src/model/Bird.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Heart.java" afterPath="$PROJECT_DIR$/src/model/Heart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Tube.java" afterPath="$PROJECT_DIR$/src/model/Tube.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/World.java" afterPath="$PROJECT_DIR$/src/model/World.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,7 +26,7 @@
       <file leaf-file-name="GameScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/GameScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="-956">
               <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="56" />
               <folding />
             </state>
@@ -68,7 +36,7 @@
       <file leaf-file-name="FinishScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/FinishScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="442">
               <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -77,21 +45,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoreScreen.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ScoreScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/ScoreScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="221">
+              <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoreManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScoreManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/ScoreManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+            <state relative-caret-position="119">
+              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,26 +67,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Canvas.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/Canvas.java">
+      <file leaf-file-name="Bird.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Bird.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Heart.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Heart.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state relative-caret-position="86">
+              <caret line="75" column="28" lean-forward="true" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
               <folding>
-                <element signature="e#433#434#0" expanded="true" />
-                <element signature="e#474#475#0" expanded="true" />
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#585#586#0" expanded="true" />
+                <element signature="e#1669#1670#0" expanded="true" />
+                <element signature="e#1699#1700#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -150,6 +106,9 @@
       <find>getCe</find>
       <find>setPo</find>
       <find>idal</find>
+      <find>insta</find>
+      <find>is</find>
+      <find>put</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,8 +133,9 @@
         <option value="$PROJECT_DIR$/src/model/Bird.java" />
         <option value="$PROJECT_DIR$/src/gui/GameScreen.java" />
         <option value="$PROJECT_DIR$/src/gui/Canvas.java" />
-        <option value="$PROJECT_DIR$/src/gui/ScoreScreen.java" />
+        <option value="$PROJECT_DIR$/scores.csv" />
         <option value="$PROJECT_DIR$/src/game/ScoreManager.java" />
+        <option value="$PROJECT_DIR$/src/gui/ScoreScreen.java" />
       </list>
     </option>
   </component>
@@ -729,12 +689,12 @@
       <updated>1481550661557</updated>
       <workItem from="1481550674041" duration="3848000" />
       <workItem from="1481732151886" duration="1331000" />
-      <workItem from="1481804836580" duration="20143000" />
+      <workItem from="1481804836580" duration="21691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25322000" />
+    <option name="totallyTimeSpent" value="26870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -795,26 +755,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1563#1564#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#1615#1616#0" expanded="true" />
-            <element signature="e#1638#1639#0" expanded="true" />
             <element signature="e#1669#1670#0" expanded="true" />
             <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1740#1741#0" expanded="true" />
-            <element signature="e#1774#1775#0" expanded="true" />
-            <element signature="e#1803#1804#0" expanded="true" />
-            <element signature="e#1831#1832#0" expanded="true" />
-            <element signature="e#1864#1865#0" expanded="true" />
-            <element signature="e#1893#1894#0" expanded="true" />
-            <element signature="e#1940#1941#0" expanded="true" />
-            <element signature="e#1974#1975#0" expanded="true" />
-            <element signature="e#2003#2004#0" expanded="true" />
-            <element signature="e#2031#2032#0" expanded="true" />
-            <element signature="e#2063#2064#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2113#2114#0" expanded="true" />
-            <element signature="e#2139#2140#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -842,26 +784,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1563#1564#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#1615#1616#0" expanded="true" />
-            <element signature="e#1638#1639#0" expanded="true" />
             <element signature="e#1669#1670#0" expanded="true" />
             <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1740#1741#0" expanded="true" />
-            <element signature="e#1774#1775#0" expanded="true" />
-            <element signature="e#1803#1804#0" expanded="true" />
-            <element signature="e#1831#1832#0" expanded="true" />
-            <element signature="e#1864#1865#0" expanded="true" />
-            <element signature="e#1893#1894#0" expanded="true" />
-            <element signature="e#1940#1941#0" expanded="true" />
-            <element signature="e#1974#1975#0" expanded="true" />
-            <element signature="e#2003#2004#0" expanded="true" />
-            <element signature="e#2031#2032#0" expanded="true" />
-            <element signature="e#2063#2064#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2113#2114#0" expanded="true" />
-            <element signature="e#2139#2140#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -982,35 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Bird.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="46" column="74" lean-forward="false" selection-start-line="46" selection-start-column="74" selection-end-line="46" selection-end-column="74" />
-          <folding>
-            <element signature="e#1563#1564#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#1615#1616#0" expanded="true" />
-            <element signature="e#1638#1639#0" expanded="true" />
-            <element signature="e#1669#1670#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1740#1741#0" expanded="true" />
-            <element signature="e#1774#1775#0" expanded="true" />
-            <element signature="e#1803#1804#0" expanded="true" />
-            <element signature="e#1831#1832#0" expanded="true" />
-            <element signature="e#1864#1865#0" expanded="true" />
-            <element signature="e#1893#1894#0" expanded="true" />
-            <element signature="e#1940#1941#0" expanded="true" />
-            <element signature="e#1974#1975#0" expanded="true" />
-            <element signature="e#2003#2004#0" expanded="true" />
-            <element signature="e#2031#2032#0" expanded="true" />
-            <element signature="e#2063#2064#0" expanded="true" />
-            <element signature="e#2086#2087#0" expanded="true" />
-            <element signature="e#2113#2114#0" expanded="true" />
-            <element signature="e#2139#2140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/game/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -1042,25 +937,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scores.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/Canvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
+        <state relative-caret-position="986">
           <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Bird.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="75" column="28" lean-forward="true" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
+          <folding>
+            <element signature="e#1669#1670#0" expanded="true" />
+            <element signature="e#1699#1700#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/GameScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="-956">
           <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/ScoreManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/FinishScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="442">
           <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1070,19 +994,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/ScoreScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="221">
+          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/ScoreManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
