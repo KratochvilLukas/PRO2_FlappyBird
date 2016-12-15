@@ -1,33 +1,25 @@
 package gui;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.FontMetrics;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Rectangle;
-import java.awt.Shape;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.image.ImageObserver;
-import java.text.AttributedCharacterIterator;
 
-import javax.swing.JButton;
-import javax.swing.Timer;
+import javax.swing.*;
 
-import game.Game;
-import interfaces.WorldListener;
 import model.Bird;
 import model.Heart;
 import model.Tube;
 import model.World;
 
-public class GameScreen extends Screen implements WorldListener {
+public class GameScreen extends Screen implements model.WorldListener {
 
 	private long lastTimeMillis;
 	private Timer timer;
+	private Bird bird;
+	private JLabel jLabelScore;
+	private JLabel jLabelLives;
 
 	public GameScreen(MainFrame mainFrame) {
 
@@ -63,18 +55,25 @@ public class GameScreen extends Screen implements WorldListener {
 				}
 
 			}
+
 		});
+		jLabelLives = new JLabel("Lives: " + Bird.DEFAULT_LIVES);
+		jLabelScore = new JLabel("Score: " + Bird.DEFAULT_SCORE);
+
+		jLabelLives.setBounds(260, 20, 120, 60);
+		jLabelScore.setBounds(100, 20, 120, 60);
+
+		add(jLabelLives);
+		add(jLabelScore);
+
+
+
 
 		// WORLD
-		Bird bird = new Bird("Bird", 240, 400);
+
+		bird = new Bird("Bird", 150, 400);
 		World world = new World(bird,this);
-
-		world.addTube(new Tube(400, 400, Color.green));
-		world.addTube(new Tube(600, 300, Color.green));
-		world.addTube(new Tube(800, 500, Color.green));
-
-		world.addHeart(new Heart(500, 450));
-		world.addHeart(new Heart(700, 600));
+		world.generateRandom();
 
 		
 		Canvas canvas = new Canvas(world);
@@ -96,10 +95,18 @@ public class GameScreen extends Screen implements WorldListener {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				long currentTimeMillis = System.currentTimeMillis();
 
+				long currentTimeMillis = System.currentTimeMillis();
 				float delta = (currentTimeMillis - lastTimeMillis) / 1000.0f;
 				world.update(delta);
+
+				jLabelLives.setText("Lives: " + bird.getLives());
+				jLabelScore.setText("Score: " + bird.getScore());
+
+				if(!bird.isAlive()){
+					timer.stop();
+					mainFrame.setScreen(new FinishScreen(mainFrame,world));
+				}
 				canvas.repaint();
 
 
@@ -113,18 +120,24 @@ public class GameScreen extends Screen implements WorldListener {
 
 	@Override
 	public void outOf() {
-		System.out.println("flew away");
+		bird.setPositionY(MainFrame.HEIGHT);
+		bird.setSpeed(bird.getFly() / 2);
+		bird.removeLive();
+		System.out.println("out of space");
 		
 	}
 	
 	@Override
 	public void crashTube(Tube tube) {
-		System.out.println("crash tube");
+		bird.removeLive();
+		bird.setPositionY(tube.getCenterY());
 		
 	}
 	
 	@Override
 	public void catchHeart(Heart heart) {
+		heart.setY(-100);
+		bird.catchHeart();
 		System.out.println("catch heart");
 		
 	}

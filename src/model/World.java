@@ -1,20 +1,23 @@
 package model;
 
+import java.awt.*;
 import java.util.ArrayList;
 
-import interfaces.WorldListener;
 import model.Bird;
 import model.Heart;
 import model.Tube;
 
 public class World {
 	
-	public static final int SPEED = 100; 
+	public static final int SPEED = 100;
+	private static final int SPACE_BETWEEN_TUBES = 300;
+	private static final int SPACE_BETWEEN_HEARTS = 450;
 	
 	private Bird bird;
 	private ArrayList<Tube> tubes;
 	private ArrayList<Heart> hearts;
 	private WorldListener worldListener;
+	private boolean generated = false;
 	
 	public World(Bird bird, WorldListener worldListener){
 		
@@ -26,6 +29,11 @@ public class World {
 	
 	public void update(float deltaTime){
 		bird.update(deltaTime);
+
+		if (generated){
+			regenerate();
+		}
+
 		if (bird.isOutOf()){
 			worldListener.outOf();
 		}
@@ -38,24 +46,57 @@ public class World {
 		for (Tube tube : tubes) {
 			tube.update(deltaTime);
 			if (bird.collideWith(tube)){
+				tube.setCounted(true);
 				worldListener.crashTube(tube);
+			}
+			else{
+				if(bird.getPositionX() > tube.getMaxX()){
+					if(!tube.isCounted()){
+						bird.addPoint();
+						System.out.println("Score: " + bird.getScore());
+						tube.setCounted(true);
+					}
+
+				}
 			}
 		}
 		
 	}
-	
-	public void addTube(Tube tube){
-		tubes.add(tube);
+
+	public void generateRandom(){
+		for(int i =0; i<3;i++){
+			float x = (SPACE_BETWEEN_TUBES + i * SPACE_BETWEEN_TUBES);
+			addTube(new Tube(x, Tube.getRandomHeight(), Color.GREEN));
+		}
+
+		addHeart(new Heart(SPACE_BETWEEN_HEARTS, Heart.getRandomY()));
+
+		generated = true;
 	}
+
+	public void regenerate(){
+		for(Tube tube : tubes){
+			if (tube.getPositionX() < -100){
+				tube.setPositionX(tube.getPositionX() + tubes.size()  * SPACE_BETWEEN_TUBES);
+				tube.setHeight(Tube.getRandomHeight());
+				tube.setCounted(false);
+			}
+		}
+
+		for(Heart heart : hearts){
+			if(heart.getHeart().getX() < -100){
+				heart.setX((float)heart.getHeart().getX() + (hearts.size() +1)*SPACE_BETWEEN_HEARTS);
+				heart.setY(Heart.getRandomY());
+			}
+		}
+	}
+
 	public void addHeart(Heart heart){
 		hearts.add(heart);
+
 	}
-	public void removeHeart(){
-		hearts.remove(hearts.size()-1);
-	}
-	public String toString(){
-		return bird.getName() + " je na pozici [" + bird.getPositionX() + "," + bird.getPositionY() + "], pocet trubek: " +
-				tubes.size() + ", pocet srdicek: " + hearts.size();
+	public void addTube(Tube tube){
+		tubes.add(tube);
 	}
 	public Bird getBird(){
 		return bird;

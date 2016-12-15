@@ -1,6 +1,6 @@
 package gui;
 
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,6 +17,7 @@ public class HomeScreen extends Screen {
 		JLabel label = new JLabel("Fim BIRD");
 		label.setFont(new Font("Arial",Font.BOLD,40));
 		label.setBounds(10, 10, 460, 100);
+		label.setForeground(Color.black);
 		
 		JButton play = new JButton("PLAY");
 		play.setBounds(100, 400, 280, 50);
@@ -38,20 +39,15 @@ public class HomeScreen extends Screen {
 				
 			}
 		});
-		score.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				mainFrame.setScreen(new ScoreScreen(mainFrame));
-				
-			}
-		});
+		score.addActionListener(e ->
+				mainFrame.setScreen(new ScoreScreen(mainFrame)));
+
 		sound.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
-				
+
+
 			}
 		});
 		
