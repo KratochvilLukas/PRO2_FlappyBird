@@ -16,7 +16,7 @@ public class Tube {
 
 	private float height;
 	private Color color;
-	private boolean counted;
+	private boolean counted = false;
 
 
 
@@ -63,11 +63,6 @@ public class Tube {
 		return counted;
 	}
 
-	public int getMinX(){
-
-		return bottomRectangle.x - (WIDTH / 2);
-	}
-
 	public float getPositionX() {
 
 		return bottomRectangle.x;
@@ -81,16 +76,6 @@ public class Tube {
 
 	public void setHeight(float randomHeight) {
 		this.height = randomHeight;
-	}
-
-	public float getHeight() {
-
-		return height;
-	}
-
-	public Color getColor() {
-
-		return color;
 	}
 
 

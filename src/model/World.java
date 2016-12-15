@@ -46,8 +46,8 @@ public class World {
 		for (Tube tube : tubes) {
 			tube.update(deltaTime);
 			if (bird.collideWith(tube)){
-				tube.setCounted(true);
 				worldListener.crashTube(tube);
+				tube.setCounted(true);
 			}
 			else{
 				if(bird.getPositionX() > tube.getMaxX()){
@@ -107,6 +107,7 @@ public class World {
 	public ArrayList<Tube> getTubes(){
 		return tubes;
 	}
+
 	
 
 }
