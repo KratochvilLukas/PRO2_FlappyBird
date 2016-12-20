@@ -78,7 +78,7 @@ public class World {
 
 	public void regenerate(){
 		for(Tube tube : tubes){
-			if (tube.getPositionX() < -100){
+			if (tube.getPositionX()<-100){
 				tube.setPositionX(tube.getPositionX() + tubes.size()  * SPACE_BETWEEN_TUBES);
 				tube.setHeight(Tube.getRandomHeight());
 				tube.setCounted(false);

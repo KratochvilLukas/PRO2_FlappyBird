@@ -41,6 +41,7 @@ public class Tube {
     public void update(float deltaTime) {
         topRectangle.x -= World.SPEED * deltaTime;
         bottomRectangle.x -= World.SPEED * deltaTime;
+
     }
 
     public void setCounted(boolean counted) {
@@ -83,6 +84,8 @@ public class Tube {
     public void setHeight(float randomHeight) {
         this.height = randomHeight;
     }
+
+
 
     public Rectangle getTopRectangle() {
         return topRectangle;

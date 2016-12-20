@@ -75,7 +75,7 @@ public class GameScreen extends Screen implements model.WorldListener {
 		World world = new World(bird,this);
 		world.generateRandom();
 
-		
+
 		Canvas canvas = new Canvas(world);
 		canvas.setBounds(0, 0, MainFrame.WIDTH, MainFrame.HEIGHT);
 
@@ -96,6 +96,7 @@ public class GameScreen extends Screen implements model.WorldListener {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
+
 				long currentTimeMillis = System.currentTimeMillis();
 				float delta = (currentTimeMillis - lastTimeMillis) / 1000.0f;
 				world.update(delta);
@@ -107,7 +108,7 @@ public class GameScreen extends Screen implements model.WorldListener {
 					timer.stop();
 					mainFrame.setScreen(new FinishScreen(mainFrame,world));
 				}
-				canvas.repaint();
+				canvas.paint(getGraphics());
 
 
 				lastTimeMillis = currentTimeMillis;
@@ -120,27 +121,27 @@ public class GameScreen extends Screen implements model.WorldListener {
 
 	@Override
 	public void outOf() {
-		bird.setPositionY(MainFrame.HEIGHT);
+		bird.setPositionY(MainFrame.HEIGHT/2);
 		bird.setSpeed(bird.getFly() / 2);
 		bird.removeLive();
 		System.out.println("out of space");
-		
+
 	}
-	
+
 	@Override
 	public void crashTube(Tube tube) {
 		if(!tube.isDamaged()) {
 			bird.removeLive();
 		}
 
-		
+
 	}
-	
+
 	@Override
 	public void catchHeart(Heart heart) {
 		heart.setY(-100);
 		bird.catchHeart();
 		System.out.println("catch heart");
-		
+
 	}
 }

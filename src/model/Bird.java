@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 
+import gui.Canvas;
 import gui.MainFrame;
 
 public class Bird {
@@ -33,7 +34,7 @@ public class Bird {
 
     public void paint(Graphics g, BufferedImage img) {
         g.setColor(Color.BLUE);
-        g.drawImage(img,body.x,body.y,BODY_SIZE,BODY_SIZE,null);
+        g.drawImage(img, body.x, body.y, BODY_SIZE, BODY_SIZE, null);
     }
 
     public void update(float deltaTime) {
@@ -43,8 +44,10 @@ public class Bird {
     }
 
     public boolean isOutOf() {
-
-        return body.contains(new Rectangle(MainFrame.HEIGHT, MainFrame.WIDTH));
+        if (body.getY() > Canvas.BOUND_UP && body.getY() < MainFrame.HEIGHT - Canvas.BOUND_DOWN) {
+            return false;
+        } else
+            return true;
     }
 
 
@@ -69,12 +72,12 @@ public class Bird {
         lives++;
     }
 
-    public void addPoint(){
+    public void addPoint() {
         score++;
     }
 
-    public boolean isAlive(){
-        return lives>0;
+    public boolean isAlive() {
+        return lives > 0;
     }
 
     public void setSpeed(float speed) {
